@@ -26,3 +26,14 @@ Process finished with exit code 1
 
 You can see `Klass1$Klass2$K$$$$bfa12ff97d5826532af518f480616ad2$$$$Klass15$Klass16` .
 It seems to be mangled.
+
+## Workaround
+
+Set `-Xmax-classfile-name` compile option.
+
+- `build.stt`
+
+```diff
++
++scalacOptions ++= Seq("-Xmax-classfile-name","254")
+```
